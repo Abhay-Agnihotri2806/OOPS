@@ -1,21 +1,11 @@
-public class SuperClass {
-    private int privateVar = 42; // Private member
-
-    public int getPrivateVar() { // Public getter
-        return privateVar;
-    }
-}
-
-class SubClass extends SuperClass {
-    void show() {
-        // System.out.println(privateVar); // ❌ Compilation error: private member not accessible
-        System.out.println("Accessing privateVar via getter: " + getPrivateVar()); // ✅ Allowed
-    }
-}
+import Balance.Account; // Importing the Account class from the Balance package
 
 public class Main {
     public static void main(String[] args) {
-        SubClass obj = new SubClass(); // Object creation
-        obj.show(); // Calls show() method in SubClass
+        // Creating an Account object with a balance of 5000.75
+        Account myAccount = new Account(5000.75);
+        
+        // Displaying the balance
+        myAccount.Display_Balance();
     }
 }

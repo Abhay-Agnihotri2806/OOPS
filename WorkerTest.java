@@ -14,7 +14,7 @@ class Worker {
 
 class DailyWorker extends Worker {
     public DailyWorker(String name, double salaryRate) {
-        super(name, salaryRate);
+        super(name, salaryRate);       // super ?
     }
 
     @Override
@@ -37,7 +37,8 @@ class SalariedWorker extends Worker {
 
 public class WorkerTest {
     public static void main(String[] args) {
-        Worker dailyWorker = new DailyWorker("John", 100);
+        //Worker dailyWorker = new DailyWorker("John", 100);   //new ?
+        DailyWorker dailyWorker = new DailyWorker("John", 100);  //DailyWorker() 
         Worker salariedWorker = new SalariedWorker("Alice", 50);
 
         System.out.println("Daily Worker Salary (worked 48 hours): $" + dailyWorker.computePay(48));
